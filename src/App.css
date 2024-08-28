@@ -1,10 +1,58 @@
-.App {
-  text-align: center;
+.Home{
+  height: 87vh;
+  background-image: repeating-radial-gradient(circle at center center, transparent 0px, transparent 8px,rgba(255,255,255,0.05) 8px, rgba(255,255,255,0.05) 11px,transparent 11px, transparent 17px,rgba(255,255,255,0.05) 17px, rgba(255,255,255,0.05) 25px,transparent 25px, transparent 38px,rgba(255,255,255,0.05) 38px, rgba(255,255,255,0.05) 42px),repeating-radial-gradient(circle at center center, rgb(0,0,0) 0px, rgb(0,0,0) 11px,rgb(0,0,0) 11px, rgb(0,0,0) 19px,rgb(0,0,0) 19px, rgb(0,0,0) 24px,rgb(0,0,0) 24px, rgb(0,0,0) 33px,rgb(0,0,0) 33px, rgb(0,0,0) 44px,rgb(0,0,0) 44px, rgb(0,0,0) 46px); background-size: 60px 60px;
+  display: flex;
+  padding-left: calc(100vw/8);
+  column-gap: calc(100vw/12);
+  font-size: 1.25vw;
+  color: white;
+  font-family: cursive;
+  padding: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav{
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-image: linear-gradient(128deg, rgba(10, 10, 10,0.06) 0%, rgba(10, 10, 10,0.06) 50%,rgba(193, 193, 193,0.06) 50%, rgba(193, 193, 193,0.06) 100%),linear-gradient(51deg, rgba(231, 231, 231,0.06) 0%, rgba(231, 231, 231,0.06) 50%,rgba(39, 39, 39,0.06) 50%, rgba(39, 39, 39,0.06) 100%),linear-gradient(90deg, hsl(216,75%,70%),hsl(216,75%,70%)); background-size: 56px 56px;
+
+}
+
+a{
+  text-decoration: none;
+  font-size: 1.5vw;
+  color: cornsilk;
+}
+
+a:hover{
+  font-size: 2vw;
+  filter: drop-shadow(0px 0px 15px rgb(255, 2, 2));
+}
+
+#name{
+  /* filter: drop-shadow(0px 0px 15px rgb(222, 213, 154)); */
+  font-size: 4vw;
+  background-image: linear-gradient(0deg, hsl(297,86%,59%),hsl(342,86%,59%),hsl(27,86%,59%),hsl(72,86%,59%),hsl(117,86%,59%),hsl(162,86%,59%),hsl(207,86%,59%),hsl(252,86%,59%));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+#details{
+  padding-top: calc(100vh/5);
+}
+#avatar{
+  height: 375px;
+  width: 375px;
+  border-radius: 8px;
+  animation: slideFromTop 1.5s ease-out forwards;
+  padding-top: calc(100vh/10);
+}
+
+#avatar:hover{
+  transform: translateY(45)
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -28,11 +76,14 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: drop-shadow(0px 0px 15px rgb(2, 255, 18));
   }
 }
