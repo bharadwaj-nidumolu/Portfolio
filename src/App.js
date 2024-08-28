@@ -4,6 +4,7 @@ import AboutMe from './components/AboutMe.js';
 import ProfessionExperience from './components/Resume.js';
 import ContactMe from './components/ContactMe.js';
 import Projects from './components/Projects.js';
+import SideMenu from './components/SideMenu.js';
 import { Box } from '@chakra-ui/react';
 import React, { useRef, useState } from 'react';
 import './App.css';
